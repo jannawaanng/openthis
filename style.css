@@ -1,0 +1,175 @@
+/* Global Styles */
+body {
+    font-family: 'Playfair Display', serif; /* Changed to a more elegant serif font */
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Content Styling */
+.content {
+    padding: 0px;
+    margin-top: 0px; /* Move everything below the photo down */
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;  /* Elegant cursive for headings */
+    color: #D483AC;
+    font-size: 24px; /* Reduced font size */
+}
+
+.love-message {
+    font-family: 'Cormorant Garamond', serif; /* Lighter, dainty serif font */
+    font-size: 22px; /* Slightly larger for emphasis */
+    color: #e6a6c6;
+    margin-top: 10px;
+    font-weight: normal; /* Lighter weight for daintier look */
+}
+
+.love-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.box {
+    background-color: #ebc2d5;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    color: #9e4244;
+    text-align: center;
+}
+
+button, .button {
+    background-color: #D483AC;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 15px; /* Reduced font size */
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+button:hover, .button:hover {
+    background-color: #ff85a2;
+}
+
+/* Heart and Bow Pattern */
+.pattern-left, .pattern-right {
+    position: fixed;
+    top: 10%;
+    z-index: 1;
+}
+
+.pattern-left {
+    left: 0;
+}
+
+.pattern-right {
+    right: 0;
+}
+
+.pattern-image {
+    width: 35px; /* Smaller images */
+    height: 35px;
+    margin: 10px;
+    animation: float 5s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Floating flowers container */
+.flower-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 5px; /* Makes the container take the full height of the viewport */
+}
+
+/* Individual flower styles */
+.flower {
+    position: absolute;
+    width: 40px; /* Adjust flower size */
+    height: 40px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Flower 1 */
+.flower1 {
+    top:45%;
+    left: 75%;
+    transform: translateX(-50%) rotate(-80deg);
+    animation-delay: 0s;
+}
+
+/* Flower 2 */
+.flower2 {
+    top: 19%;
+    left: 71%;
+    transform: translateX(-20%) rotate(-15deg);
+    animation-delay: 1s;
+}
+
+/* Flower 3 */
+.flower3 {
+    top: 30%;
+    left: 90%;
+    transform: translateX(-50%) rotate(-30deg);
+    animation-delay: 2s;
+}
+
+/* Flower 4 */
+.flower4 {
+    top: 40%;
+    left: 10%;
+    transform: translateX(20%) rotate(-70deg);
+    animation-delay: 3s;
+}
+
+/* Flower 5 */
+.flower5 {
+    top: 20%;
+    left: 20%;
+    transform: translateX(-50%) rotate(300deg);
+    animation-delay: 4s;
+}
+
+/* Flower 6 */
+.flower6 {
+    top: 47%;
+    left: 40%;
+    transform: translateX(-10%) rotate(300deg);
+    animation-delay: 5s;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 35vh; /* Makes the container take the full height of the viewport */
+}
+
+.photo {
+    width: 250px; /* Adjust size based on preference */
+    height: auto;
+}
+/* Spotify Styling */
+iframe {
+    width: 250px;  /* Reduced width */
+    height: 80px;  /* Reduced height */
+    margin-top: 20px;
+}
+
+/* Ensure consistency in subsection font sizes */
+h1, h2, h3 {
+    font-size: 24px; /* Consistent size */
+}

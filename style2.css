@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for body */
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Lightning Effect Styling */
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Prevents interference with other elements */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.lightning-img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+}
+
+
+
+/* Content Styling */
+.content {
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    color: #4e0707;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* Countdown Timer Styling */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.countdown-box {
+    font-family: 'Times New Roman', serif;
+    font-size: 25px;
+    color: #ffab00;
+    background-color: #710c04;
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners for the boxes */
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow for depth */
+    border: 3px solid #000000; /* White border around the box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Pattern Styling */
+.pattern-left, .pattern-right {
+    position: fixed;
+    top: 10%;
+    z-index: 1;
+}
+
+.pattern-left {
+    left: 0;
+}
+
+.pattern-right {
+    right: 0;
+}
+
+.pattern-image {
+    width: 35px; /* Smaller images */
+    height: 35px;
+    margin: 10px;
+    animation: float 5s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Concert Ticket Image Styling */
+.concert-image {
+    width: 300px; /* Adjust size based on preference */
+    height: auto;
+    margin-top: 30px;
+}
+
+/* Spotify Styling */
+iframe {
+    width: 45%;
+    height: 80px;
+    margin-top: 20px;
+}
+
+ 

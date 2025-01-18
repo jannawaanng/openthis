@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Concert - Get Hype!</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Lightning Effect (Multiple Lightning Flashes) -->
+    <div id="lightning1" class="lightning">
+        <img src="lightning.png" alt="Lightning Animation" class="lightning-img">
+    </div>
+
+    <div id="lightning2" class="lightning">
+        <img src="lightning.png" alt="Lightning Animation" class="lightning-img">
+    </div>
+
+    <div id="lightning3" class="lightning">
+        <img src="lightning.gif" alt="Lightning Animation" class="lightning-img">
+    </div>
+
+    <div id="lightning4" class="lightning">
+        <img src="lightning.gif" alt="Lightning Animation" class="lightning-img">
+    </div>
+
+    <!-- Spotify Embed for Jimi Hendrix -->
+    <iframe src="https://open.spotify.com/embed/track/0auKlivXpm76wR63mMJ3pR?si=b220f18792484228" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay></iframe>
+
+    <!-- Heart and Bow Pattern -->
+    <div class="pattern-left">
+        <img src="bow.png" alt="Bow" class="pattern-image">
+        <img src="heart.png" alt="Heart" class="pattern-image">
+        <img src="bow.png" alt="Bow" class="pattern-image">
+    </div>
+    <div class="pattern-right">
+        <img src="heart.png" alt="Heart" class="pattern-image">
+        <img src="bow.png" alt="Bow" class="pattern-image">
+        <img src="heart.png" alt="Heart" class="pattern-image">
+    </div>
+
+    <div class="content">
+        <img src="concert-ticket.jpg" alt="Concert Ticket" class="concert-image">
+        <h1>GET HYPE BIIYTTS, WE'RE SEEING JIMI (kind of)</h1>
+
+        <!-- Countdown Timer -->
+        <div id="countdown">
+            <div class="countdown-box" id="days"></div>
+            <div class="countdown-box" id="hours"></div>
+            <div class="countdown-box" id="minutes"></div>
+            <div class="countdown-box" id="seconds"></div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Script
+        const concertDate = new Date("April 6, 2025 19:00:00").getTime();
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = concertDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days + "d";
+            document.getElementById("hours").innerHTML = hours + "h";
+            document.getElementById("minutes").innerHTML = minutes + "m";
+            document.getElementById("seconds").innerHTML = seconds + "s";
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "Concert is live!";
+            }
+        }, 1000);
+
+        // Lightning Delay Logic (after 5 seconds)
+        window.onload = function() {
+            setTimeout(() => document.getElementById('lightning1').style.opacity = 1, 5000);
+            setTimeout(() => document.getElementById('lightning2').style.opacity = 1, 5500);
+            setTimeout(() => document.getElementById('lightning3').style.opacity = 1, 6000);
+            setTimeout(() => document.getElementById('lightning4').style.opacity = 1, 6500);
+        };
+    </script>
+</body>
+</html>
